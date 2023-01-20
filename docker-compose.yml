@@ -17,7 +17,7 @@ services:
     container_name: nginx
     restart: always
     ports: 
-      - "80:80"
+      - "90:80"
 
   mymongo:
     build: ./mongodb
