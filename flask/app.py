@@ -94,7 +94,7 @@ class One_User(Resource):
 
 class NonDB(Resource):
     def get(self):
-        return "Hello"
+        return "Hello user"
 
 
 api.add_resource(User, '/api/user')
