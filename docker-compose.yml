@@ -20,7 +20,7 @@ services:
       - "90:80"
 
   mymongo:
-    build: ./mongodb
+    image: mongo
     container_name: mongo
     ports:
       - "27017:27017"

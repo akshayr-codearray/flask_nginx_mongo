@@ -1,11 +1,11 @@
 from bson.json_util import dumps
-from flask import Flask, request, make_response
+from flask import Flask, request, make_response, jsonify
 from flask_pymongo import PyMongo
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
 api = Api(app)
-app.config["MONGO_URI"] = "mongodb://mymongo:27017/myDB"
+app.config["MONGO_URI"] = "mongodb://mongo:27017/my_DB"
 mongo = PyMongo(app)
 
 
@@ -92,11 +92,11 @@ class One_User(Resource):
                 return make_response({"message": "invalid json format", "valid_format": {"user_id": "id"}}, 400)
 
 
-class NonDB(Resource):
+class Default(Resource):
     def get(self):
-        return "Hello user"
+        return jsonify({"message":"Default endpoint"})
 
 
 api.add_resource(User, '/api/user')
 api.add_resource(One_User, '/api/one')
-api.add_resource(NonDB,'/non')
+api.add_resource(Default,'/')
