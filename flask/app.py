@@ -94,7 +94,7 @@ class One_User(Resource):
 
 class Default(Resource):
     def get(self):
-        return jsonify({"message":"Default endpoint modified_3"})
+        return jsonify({"message":"Default endpoint modified_4"})
 
 
 api.add_resource(User, '/api/user')
