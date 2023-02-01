@@ -1,2 +1,2 @@
 # flask_nginx_mongo
-Flask app with mongodb and nginx server
+Flask app with mongodb and nginx server.
