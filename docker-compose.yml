@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  flask:
+  flask-service:
     build: ./flask
     container_name: flask
     restart: always
@@ -19,7 +19,7 @@ services:
     ports: 
       - "90:80"
 
-  mymongo:
+  mongodb-service:
     image: mongo
     container_name: mongo
     ports:

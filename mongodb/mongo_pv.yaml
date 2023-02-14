@@ -9,17 +9,3 @@ spec:
     storage: 1Gi
   hostPath:
     path: /data/mongo
-
-
-
-#     apiVersion: v1
-# kind: PersistentVolume
-# metadata:
-#   name: mongo-pv
-# spec:
-#   capacity:
-#     storage: 256Mi
-#   accessModes:
-#     - ReadWriteOnce
-#   hostPath:
-#     path: /tmp/db

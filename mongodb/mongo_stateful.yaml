@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata: 
   name: mongo-stateful
 spec:
-  # serviceName: mongo-service
+  serviceName: mongodb-service
   replicas: 3
   selector: 
     matchLabels: 
@@ -28,11 +28,6 @@ spec:
               name: mongo-volume
               mountPath: /data/db
               
-      # volumes: 
-      #   - 
-      #     name: mongo-volume
-      #     persistentVolumeClaim: 
-      #       claimName: "mongo-claim"
   volumeClaimTemplates:
     - metadata:
         name: mongo-volume
