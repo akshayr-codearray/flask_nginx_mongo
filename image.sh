@@ -1,3 +1,3 @@
 #!/bin/sh
 cd flask
-docker image build -t helloworld .
+minikube image build -t test_image .
