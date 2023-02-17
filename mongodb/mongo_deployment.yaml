@@ -22,11 +22,11 @@ spec:
               containerPort: 27017
               protocol: TCP
 
-      #     volumeMounts:
-      #       - name: mongo-volume
-      #         mountPath: /data/db
+          volumeMounts:
+            - name: mongo-volume
+              mountPath: /data/db
 
-      # volumes:
-      #   - name: mongo-volume
-      #     persistentVolumeClaim: 
-      #       claimName: mongo-claim
+      volumes:
+        - name: mongo-volume
+          persistentVolumeClaim: 
+            claimName: mongo-claim
